@@ -1,0 +1,12 @@
+ProductVersionCurrencyDTO:
+  type: object
+  properties:
+    id:
+      format: int64
+      type: integer
+    name:
+      type: string
+    symbol:
+      type: string
+    isoCode:
+      type: string

@@ -1,0 +1,8 @@
+NameFilter:
+  type: object
+  properties:
+    name:
+      type: string
+      maxLength: 255
+      nullable: false
+      pattern: '^[A-Z0-9_]+$'

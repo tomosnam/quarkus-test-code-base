@@ -1,0 +1,18 @@
+Result:
+  allOf:
+    - $ref: '../dto/DTO.yml#/DTO'
+    - type: object
+      properties:
+        referenceID:
+          type: string
+        code:
+          type: string
+        message:
+          type: string
+        data:
+          $ref: '../dto/DTO.yml#/DTO'
+      required:
+        - referenceID
+        - code
+        - message
+        - data

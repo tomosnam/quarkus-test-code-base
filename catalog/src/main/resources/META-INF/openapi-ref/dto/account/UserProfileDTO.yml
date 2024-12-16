@@ -1,0 +1,74 @@
+UserProfileDTO:
+  type: object
+  properties:
+    id:
+      format: int64
+      type: integer
+      nullable: false
+    objectId:
+      $ref: '#/components/schemas/uuid'
+      nullable: false
+    scope:
+      enum: [ INTERNAL, EXTERNAL, UNBOUNDED ]
+      type: string
+      nullable: false
+    accessLevel:
+      enum: [ MANAGER, BASIC ]
+      type: string
+      nullable: false
+    homeCountry:
+      $ref: 'UserCountryDTO.yml#/UserCountryDTO'
+      nullable: false
+    localization:
+      $ref: 'UserCountryDTO.yml#/UserCountryDTO'
+      nullable: false
+    givenName:
+      type: string
+      maxLength: 255
+      nullable: false
+    otherGivenName:
+      type: string
+      maxLength: 255
+      nullable: true
+    surname:
+      type: string
+      maxLength: 255
+      nullable: false
+    otherSurname:
+      type: string
+      maxLength: 255
+      nullable: true
+    fullName:
+      type: string
+      maxLength: 1024
+      nullable: false
+    email:
+      type: string
+      maxLength: 255
+      nullable: false
+    state:
+      enum: [ DRAFT, INACTIVE, ACTIVE ]
+      type: string
+      nullable: false
+    accessToken:
+      type: string
+      maxLength: 65000
+      nullable: true
+    tokenId:
+      format: int32
+      type: integer
+      nullable: true
+    expiry:
+      format: date-time
+      type: string
+      example: 2022-03-10T12:15:50
+      nullable: true
+components:
+  schemas:
+    uuid:
+      type: string
+      pattern: '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$'
+      # the regex above limits the length;
+      # however, some tools might require explicit settings:
+      minLength: 36
+      maxLength: 36

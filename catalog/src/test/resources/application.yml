@@ -1,0 +1,13 @@
+quarkus:
+  datasource:
+    db-kind: mssql
+    jdbc:
+      url: jdbc:sqlserver://;serverName=localhost;databaseName=mkplatlocal;encrypt=true;trustServerCertificate=true;
+      max-size: 200
+  http:
+    port: 8081
+    root-path: /account
+  swagger-ui:
+    path: /account/swagger-ui
+    enable: true
+    always-include: true

@@ -1,0 +1,3 @@
+VoidDTO:
+  allOf:
+    - $ref: 'DTO.yml#/DTO'

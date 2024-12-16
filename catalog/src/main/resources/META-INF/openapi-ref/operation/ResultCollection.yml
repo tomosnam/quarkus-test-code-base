@@ -1,0 +1,20 @@
+ResultCollection:
+  allOf:
+    - $ref: '../dto/DTO.yml#/DTO'
+    - type: object
+      properties:
+        referenceID:
+          type: string
+        code:
+          type: string
+        message:
+          type: string
+        data:
+          type: array
+          items:
+            $ref: '../dto/DTO.yml#/DTO'
+      required:
+        - referenceID
+        - code
+        - message
+        - data

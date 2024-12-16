@@ -1,0 +1,10 @@
+ProductDTO:
+  type: object
+  properties:
+    id:
+      format: int64
+      type: integer
+    name:
+      type: string
+    country:
+      $ref: 'ProductCountryDTO.yml#/ProductCountryDTO'

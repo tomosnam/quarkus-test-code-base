@@ -1,0 +1,8 @@
+CountryISOCodeFilter:
+  type: object
+  properties:
+    isoCode:
+      type: string
+      maxLength: 255
+      nullable: false
+      pattern: '^[A-Z]+$'

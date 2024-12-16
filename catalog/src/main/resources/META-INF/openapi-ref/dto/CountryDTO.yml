@@ -1,0 +1,19 @@
+CountryDTO:
+  type: object
+  properties:
+    id:
+      format: int64
+      type: integer
+      nullable: false
+    name:
+      type: string
+      nullable: false
+      maxLength: 255
+    isoCode:
+      type: string
+      nullable: false
+      maxLength: 2
+    supportInstruction:
+      type: string
+      nullable: false
+      maxLength: 65000

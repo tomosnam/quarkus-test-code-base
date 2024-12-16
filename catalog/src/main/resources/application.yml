@@ -1,0 +1,23 @@
+quarkus:
+  datasource:
+    db-kind: mssql
+    jdbc:
+      url: jdbc:sqlserver://;serverName=localhost;databaseName=mkplatlocal;encrypt=true;trustServerCertificate=true;
+      max-size: 200
+  http:
+    port: 8083
+    root-path: /catalog
+  rest-client:
+    catalog-api:
+      url: "http://localhost:8083/catalog"
+      verify-host: false
+    account-api:
+      url: "http://localhost:8081/account"
+      verify-host: false
+  hibernate-orm:
+    log:
+      sql: false
+  swagger-ui:
+    path: /account/swagger-ui
+    enable: true
+    always-include: true

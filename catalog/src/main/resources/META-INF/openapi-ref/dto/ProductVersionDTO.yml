@@ -1,0 +1,21 @@
+ProductVersionDTO:
+  type: object
+  properties:
+    id:
+      format: int64
+      type: integer
+    product:
+      $ref: 'ProductDTO.yml#/ProductDTO'
+    version:
+      format: int64
+      type: integer
+    commercialName:
+      type: string
+    description:
+      type: string
+    displayComments:
+      type: string
+    currencies:
+        type: array
+        items:
+          $ref: 'ProductVersionCurrencyDTO.yml#/ProductVersionCurrencyDTO'

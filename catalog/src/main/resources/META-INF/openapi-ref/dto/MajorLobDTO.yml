@@ -1,0 +1,32 @@
+MajorLobDTO:
+  type: object
+  properties:
+    id:
+      format: int64
+      type: integer
+    #country:
+      #$ref: 'CountryDTO.yml#/CountryDTO'
+    name:
+      type: string
+    state:
+      enum: [ DRAFT, INACTIVE, ACTIVE ]
+      type: string
+      nullable: false
+    createdDate:
+      format: date-time
+      type: string
+      example: 2022-03-10T12:15:50
+      nullable: false
+    updated:
+      format: date-time
+      type: string
+      example: 2022-03-10T12:15:50
+      nullable: false
+    activated:
+      format: date-time
+      type: string
+      example: 2022-03-10T12:15:50
+    inactivated:
+      format: date-time
+      type: string
+      example: 2022-03-10T12:15:50

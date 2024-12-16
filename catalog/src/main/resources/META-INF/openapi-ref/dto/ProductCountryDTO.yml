@@ -1,0 +1,10 @@
+ProductCountryDTO:
+  type: object
+  properties:
+    id:
+      format: int64
+      type: integer
+    name:
+      type: string
+    isoCode:
+      type: string
