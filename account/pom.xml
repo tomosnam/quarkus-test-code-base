@@ -22,11 +22,11 @@
         </dependency>
 
         <!-- Marketplace Framework -->
-<!--        <dependency>-->
-<!--            <groupId>market</groupId>-->
-<!--            <artifactId>framework</artifactId>-->
-<!--            <version>${project.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>market</groupId>
+            <artifactId>framework</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
         <!-- Hibernate, SQL Server, Validations -->
         <dependency>
